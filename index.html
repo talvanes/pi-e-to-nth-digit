@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<title>Pi and e to the Nth digit</title>
+
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!-- Custom styling -->
+		<link href="css/custom.css" rel="stylesheet">
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<!-- A custom Javascript file -->
+		<script src="js/main.js"></script>
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="container">
+			<h1 class="page-header"><span id="const">Pi</span> to the Nth digit</h1>
+
+			<!-- Custom Form Controls -->
+			<div class="container-fluid custom-group">
+				<div class="row">
+					<!-- radio buttons for our constants: Pi or e -->
+					<div class="col-lg-4">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<label for="pi">Pi</label>
+								<input type="radio" id="pi" name="constant" value="pi" aria-label="Pi constant" form="consts-form" checked>
+							</span>
+							<span class="input-group-addon">
+								<label for="e">E</label>
+								<input type="radio" id="e" name="constant" value="e" aria-label="E constant" form="consts-form" >
+							</span>
+						</div><!-- /input-group -->
+					</div>
+					<!-- form control right bar -->
+					<div class="col-lg-8">
+						<form name="consts-form" class="navbar-form navbar-right" role="number">
+							<div class="form-group">
+								<label for="digits">How many digits?</label>
+								<input type="number" id="digits" class="form-control" min="1" max="21" step="1">
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<!-- Space for either a number: Pi or E -->
+			<div class="custom-group">
+				<samp id="res"></samp>
+			</div>
+
+		</div>
+
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/bootstrap.min.js"></script>
+		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+		<script src="js/ie10-viewport-bug-workaround.js"></script>
+	</body>
+</html>
